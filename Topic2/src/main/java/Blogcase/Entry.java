@@ -1,33 +1,33 @@
-/**
- * @author cgrod
- *
- */
 package Blogcase;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+import java.util.UUID;
+/**
+ * @author cgrod
+ *
+ */
 public class Entry {
 
-	private int entryID;
+	private UUID entryID;
 	private String title;
 	private String director;
 	private String genre;
 	private String postDate;
-	private static int IDGenerator = 0;
+	//private static int IDGenerator = 0;
 
 	public Entry(String title, String director, String genre, String postDate) {
-		this.entryID = IDGenerator++;
+		this.entryID = UUID.randomUUID();
 		this.title = title;
 		this.director = director;
 		this.genre = genre;
 		this.postDate = postDate;
 	}
 
-	public void setID(int entryID) {
-		this.entryID = entryID;
-	}
+	public void setEntryID(UUID entryID) {
+        this.entryID = entryID;
+    }
 
 	public void setTitle(String title) {
 		this.title = title;
@@ -49,10 +49,9 @@ public class Entry {
 		this.postDate = dateFormat.format(date);
 	}
 
-	public int getEntryId() {
-		return this.entryID;
-	}
-
+	public UUID getEntryID() {
+        	return entryID;
+    	}
 	public String getTitle() {
 		return this.title;
 	}
