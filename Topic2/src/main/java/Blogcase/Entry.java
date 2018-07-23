@@ -1,3 +1,7 @@
+/**
+ * @author cgrod
+ *
+ */
 package Blogcase;
 
 import java.text.DateFormat;
@@ -9,15 +13,15 @@ public class Entry {
 	private int entryID;
 	private String title;
 	private String director;
-	private String genero;
+	private String genre;
 	private String postDate;
 	private static int IDGenerator = 0;
 
-	public Entry(String title, String director, String genero, String postDate) {
+	public Entry(String title, String director, String genre, String postDate) {
 		this.entryID = IDGenerator++;
 		this.title = title;
 		this.director = director;
-		this.genero = genero;
+		this.genre = genre;
 		this.postDate = postDate;
 	}
 
@@ -33,8 +37,8 @@ public class Entry {
 		this.director = director;
 	}
 
-	public void setGenero(String genero) {
-		this.genero = genero;
+	public void setGenre(String genre) {
+		this. = genre;
 	}
 
 	// setting current date
@@ -57,8 +61,8 @@ public class Entry {
 		return this.director;
 	}
 
-	public String getGenero() {
-		return this.genero;
+	public String getGenre() {
+		return this.genre;
 	}
 
 	public String getDate() {
