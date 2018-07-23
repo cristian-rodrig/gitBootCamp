@@ -22,7 +22,7 @@ public interface ShoppingCartService {
 	 * 
 	 * @param int id. Item that will be get it from the cart.
 	 */
-	public CartItem getCartItem (int id);
+	public CartItem getCartItem (String id);
 	
 	/**
 	 * 

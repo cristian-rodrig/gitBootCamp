@@ -15,23 +15,23 @@ public class ShoppingCartServiceImp implements ShoppingCartService {
 	}
 
 	/**
-	 * add a item to cart
+	 * add a item from the cart
 	 */
 	public void addCartItem(CartItem item) {
 		items.add(item);
 	}
 
 	/**
-	 * deelte a item to cart
+	 * delete a item from the cart
 	 */
 	public boolean deleteCartItem(CartItem item) {
 		return items.remove(item);
 	}
 
 	/**
-	 * Returns a item from cart 
+	 * Returns a item from the cart 
 	 */
-	public CartItem getCartItem(int id) {
+	public CartItem getCartItem(String id) {
 		CartItem resutl;
 		for (CartItem cartItem : items) {
 			if (cartItem.getId() == id) {
@@ -50,10 +50,12 @@ public class ShoppingCartServiceImp implements ShoppingCartService {
 	}
 
 	/**
-	 * delete all the items from the cart
+	 * the cart is empty 
 	 */
 	public void clearCart() {
 		items.clear();
 	}
+
+	
 
 }
