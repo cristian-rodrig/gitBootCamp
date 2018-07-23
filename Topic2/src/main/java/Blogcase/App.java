@@ -1,3 +1,7 @@
+/**
+ * @author cgrod
+ *
+ */
 package Blogcase;
 
 public class App {
