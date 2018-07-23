@@ -1,4 +1,10 @@
 package com.bootcamp.topic3.cart;
+import java.util.UUID;
+
+/**
+ * @author cgrod
+ *
+ */
 
 public class CartItem {
 	public static int idGenerator = 0;
@@ -9,7 +15,7 @@ public class CartItem {
 
 	public CartItem(String name, double price, int quantitie) {
 
-		this.id = idGenerator++;
+		this.id = UUID.randomUUID().toString();
 		this.name = name;
 		this.price = price;
 		this.quantity = quantitie;
@@ -23,11 +29,11 @@ public class CartItem {
 		CartItem.idGenerator = idGenerator;
 	}
 
-	public int getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 
