@@ -1,9 +1,8 @@
+package Blogcase;
 /**
  * @author cgrod
  *
  */
-package Blogcase;
-
 public class File {
 
 	String fileDirectory;
