@@ -1,14 +1,13 @@
-/**
- * @author cgrod
- *
- */
 package Blogcase;
 
 import java.util.LinkedList;
 import java.util.List;
 
 import Blogcase.Entry;
-
+/**
+ * @author cgrod
+ *
+ */
 public class Blog {
 
 	private Entry entry;
@@ -42,7 +41,7 @@ public class Blog {
 			entry = entryList.get(entryList.size() - i);
 			recentList.add(entry);
 			entry.getEntryId();
-			System.out.print("Author: " + entry.getDirector() + "\nTitle: " + entry.getTitle() + "\n\n" + entry.getGenero()
+			System.out.print("Author: " + entry.getDirector() + "\nTitle: " + entry.getTitle() + "\n\n" + entry.getGenre()
 					+ "\nRelease Date: " + entry.getDate().toString() + "\n");
 			if (entryList.size() - i < 0) {
 				break;
