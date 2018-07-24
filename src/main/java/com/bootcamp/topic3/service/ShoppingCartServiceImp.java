@@ -18,16 +18,22 @@ public class ShoppingCartServiceImp implements ShoppingCartService {
 	 * add a item from the cart
 	 */
 	public void addCartItem(CartItem item) {
+		if(item !=null){
 		items.add(item);
+		}
 	}
 
 	/**
 	 * delete a item from the cart
 	 */
 	public boolean deleteCartItem(CartItem item) {
-		return items.remove(item);
+		if (item==null){
+		    return false;
+		} else {
+		    return items.remove(item);
+		}
 	}
-
+		
 	/**
 	 * Returns a item from the cart 
 	 */
