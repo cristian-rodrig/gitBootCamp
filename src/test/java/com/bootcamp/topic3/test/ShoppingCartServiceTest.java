@@ -55,4 +55,15 @@ public class ShoppingCartServiceTest {
 		assertTrue(expectedTotal == actualTotal);
 	}
 	
-}
+	
+	@Test
++	public void addNullItemTest() {
++		service.addCartItem(null);
+		int cantItems=service.createShoppingCart().getItems().size();
+		AssertTrue(cantItems==0);
+	}
+	
+	@Test
++	public void deleteNullItemTest() {
++		AssertFalse(service.deleteCartItem(null));
+	}
