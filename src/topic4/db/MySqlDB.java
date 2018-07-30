@@ -36,8 +36,7 @@ public class MySqlDB {
             		+ "join COURSE c on c.id_course = src.fk_course "
             		+ "join TEACHER t on t.id_teacher = c.assigned_teacher "
             		+ "join STUDENT s on src.fk_student = s.id_student "
-            		+ "WHERE c.id_course = "+courseId
-            		+" ORDER BY c.id_course, STUDENT_LAST_NAME ");
+            		+" ORDER BY STUDENT_LAST_NAME ");
             writeResultEx3(resultSet);
             
             
