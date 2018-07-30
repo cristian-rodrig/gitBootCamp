@@ -110,6 +110,7 @@ public class MySqlDB {
 			String courseName = resultSet2.getString("course_name"); 
 			int percentage = resultSet2.getInt("passed"); 
 			System.out.println("Percentage of students that passed "+courseName +": "+percentage+"%");
+			System.out.println("Percentage of students that fail "+courseName +": "+(100-percentage)+"%");
 		}
 	}
 
