@@ -175,7 +175,7 @@ INSERT INTO `STUDENT_REALIZED_COURSE` VALUES (7,6,7,6.6,35,300);
   from STUDENT_REALIZED_COURSE src
   join COURSE c on c.id_course = src.fk_course
   join (select count(*) as totalStudents, s.fk_course from STUDENT_REALIZED_COURSE s
-  group by s.fk_course) passed ON
-  passed.fk_course = src.fk_course where src.final_note < 7
+  group by s.fk_course) failed ON
+  failed.fk_course = src.fk_course where src.final_note < 7
   AND c.id_course = 100;
   
