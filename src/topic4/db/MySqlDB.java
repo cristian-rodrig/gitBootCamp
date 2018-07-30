@@ -109,7 +109,7 @@ public class MySqlDB {
 		while (resultSet.next()) { 
 			String courseName = resultSet2.getString("course_name"); 
 			int percentage = resultSet2.getInt("passed"); 
-			System.out.println("Porcentaje de aprobados para el curso "+courseName +": "+percentage+"%");
+			System.out.println("Percentage of students that passed "+courseName +": "+percentage+"%");
 		}
 	}
 
