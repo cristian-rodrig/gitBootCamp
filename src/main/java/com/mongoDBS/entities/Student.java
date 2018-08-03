@@ -9,10 +9,6 @@ import org.mongodb.morphia.annotations.Property;
 @Entity("Students")
 public class Student {
 	
-
-	@Id
-	private int id;
-	
 	@Property("id_student")
 	private int id_student;
 	
@@ -35,14 +31,7 @@ public class Student {
 		this.birthday = birthday;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-	
+		
 	public String getfirstname() {
 		return first_name;
 	}
@@ -66,6 +55,4 @@ public class Student {
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
-	
-
 }
