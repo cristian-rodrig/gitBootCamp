@@ -13,7 +13,7 @@ import com.mongoDBS.entities.Student_Realized_Course;
 import com.mongoDBS.entities.Teacher;
 import com.mongodb.MongoClient;
 
-public class main {
+public class Main {
 
 	public final static String dbName = "highschool";
 	public final static String entitiesPackage = "com.mongoDB.entities";
@@ -24,12 +24,12 @@ public class main {
 	    MongoClient mongo = new MongoClient();
 	    Datastore datastore = morphia.createDatastore(mongo, dbName);
 	    
-	    Student_Realized_CourseDAO dao = new Student_Realized_CourseDAO(morphia, mongo, dbName);
+	    StudentRealizedCourseDAO dao = new StudentRealizedCourseDAO(morphia, mongo, dbName);
 	    
 	    Course c = new Course();
 	    c.setId(100);
 	    
-	    QueryResults<Student_Realized_Course> resultado = dao.findNotesGraterThan(datastore, c,4);
+	    QueryResults<StudentRealizedCourse> resultado = dao.findNotesGraterThan(datastore, c,4);
 	    System.out.println("Students with notes greater than 4 :"+resultado.count());
 	   
 	    Teacher t = new Teacher();
