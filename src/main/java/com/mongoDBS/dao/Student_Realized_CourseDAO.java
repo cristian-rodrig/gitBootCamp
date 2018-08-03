@@ -16,7 +16,7 @@ public class StudentRealizedCourseDAO extends BasicDAO<Student_Realized_Course, 
 			super(mongo, morphia, dbName);
 		}
 		
-		public QueryResults<Student_Realized_Course> findNotesGraterThan(Datastore datastore, Course course, int final_note) {
+		public QueryResults<StudentRealizedCourse> findNotesGraterThan(Datastore datastore, Course course, int final_note) {
 			Query<StudentRealizedCourse> query = datastore.createQuery(StudentRealizedCourse.class);
 			query.and(query.criteria("course").equal(course))
 			.and(query.criteria("final_note").greaterThanOrEq(final_note));
