@@ -7,10 +7,7 @@ import org.mongodb.morphia.annotations.Property;
 import org.mongodb.morphia.annotations.Reference;
 
 @Entity("STUDENT_REALIZED_COURSE")
-public class Student_Realized_Course {
-
-	@Id
-	private ObjectId id;
+public class StudentRealizedCourse {
 
 	@Reference("student")
 	private Student student;
@@ -33,9 +30,9 @@ public class Student_Realized_Course {
 	public Student_Realized_Course() {
 	}
 
-	public Student_Realized_Course(ObjectId id, Student student, Course course, double note_1, double note_2,
+	public Student_Realized_Course(Student student, Course course, double note_1, double note_2,
 			double note_3, double final_note) {
-		this.id = id;
+		
 		this.student = student;
 		this.course = course;
 		this.note_1 = note_1;
@@ -44,14 +41,7 @@ public class Student_Realized_Course {
 		this.final_note = final_note;
 	}
 
-	public ObjectId getId() {
-		return id;
-	}
-
-	public void setId(ObjectId id) {
-		this.id = id;
-	}
-
+	
 	public Student getStudent() {
 		return student;
 	}
